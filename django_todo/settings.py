@@ -14,7 +14,7 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -84,9 +84,8 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.parse(postgres://ukxmptfsjbzwrv:5d164995d89cd62e41d4da7583a69a76a715ddb06062558a589154746da568a2@ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/dbj776nlokkln9)
+    'default': dj_database_url.parse('postgres://wpqbbpocqgerxt:441d80f22db862d6f0d0b705c0f7185f2461ff5e922ab64c968b5792e46153d0@ec2-176-34-211-0.eu-west-1.compute.amazonaws.com:5432/dbgh05kchfg4gu')
 }
-
 
 
 # Password validation
